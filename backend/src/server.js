@@ -6,6 +6,8 @@ require('dotenv').config();
 const healthRoutes = require('./routes/health.routes');
 const teamRoutes = require('./routes/team.routes'); 
 const playerRoutes  = require('./routes/player.routes');
+const gameRoutes     = require('./routes/game.routes');
+const standingsRoutes = require('./routes/standings.routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,6 +25,8 @@ app.use(express.json());
 app.use('/api/health', healthRoutes);
 app.use('/api/teams', teamRoutes);
 app.use('/api/players', playerRoutes);
+app.use('/api/games',     gameRoutes);
+app.use('/api/standings', standingsRoutes);
 
 // Ruta fallback para endpoints no encontrados
 app.use((req, res) => {
