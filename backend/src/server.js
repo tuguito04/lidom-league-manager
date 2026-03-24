@@ -5,6 +5,7 @@ require('dotenv').config();
 // Importar rutas
 const healthRoutes = require('./routes/health.routes');
 const teamRoutes = require('./routes/team.routes'); 
+const playerRoutes  = require('./routes/player.routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,6 +22,7 @@ app.use(express.json());
 // ── Rutas ────────────────────────────────────────────────
 app.use('/api/health', healthRoutes);
 app.use('/api/teams', teamRoutes);
+app.use('/api/players', playerRoutes);
 
 // Ruta fallback para endpoints no encontrados
 app.use((req, res) => {
