@@ -1,4 +1,10 @@
-node_modules
+# Base de datos
+*.db
+*.db-shm
+*.db-wal
+
+# Dependencias
+node_modules/
+
+# Variables de entorno
 .env
-dist
-build
