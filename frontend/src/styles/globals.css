@@ -1,0 +1,79 @@
+/* ── Variables LIDOM ─────────────────────────── */
+:root {
+  --lidom-blue:    #002D62;
+  --lidom-red:     #CE1126;
+  --lidom-gold:    #F4C542;
+  --lidom-white:   #FFFFFF;
+
+  --bg-base:       #0F1623;
+  --bg-surface:    #1A2235;
+  --bg-elevated:   #212D42;
+  --bg-hover:      #263348;
+
+  --text-primary:  #F0F4FF;
+  --text-secondary:#8B9CC4;
+  --text-muted:    #4A5568;
+
+  --border:        #2A3A5C;
+  --border-light:  #1E2D4A;
+
+  --success:       #10B981;
+  --warning:       #F59E0B;
+  --danger:        #EF4444;
+
+  --sidebar-width: 240px;
+  --header-height: 64px;
+
+  --radius-sm:     6px;
+  --radius-md:     10px;
+  --radius-lg:     16px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.5);
+
+  --transition: 150ms ease;
+}
+
+/* ── Reset base ──────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+input, select, textarea { font: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ── Layout principal ────────────────────────── */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  padding: 24px;
+  flex: 1;
+}
+
+/* ── Scrollbar ───────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
